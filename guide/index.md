@@ -30,7 +30,10 @@ or tweaks to the changes that were just made.
 If the agent does something you don't like or don't want then you can simple say "undo" and it will revert the last set of committed changes.
 <p></p>
 It's a good idea to follow your normal git practices. i.e. work on a branch, use multiple hldk sessions to work on a set of changes, then open a PR etc
-
+<p></p>
+<b>Important:</b> You do still need to review the code that the agent is writing. It will occasionally get things wrong and you are still responsible for the code you commit to main etc. The HLDK shows you the updates that were made and you can also use git diffs and PR reviews etc
+<p></p>
+Once you learn how to do it, there's no going back IMHO... happy prompting... :-)
 
 
 
