@@ -14,9 +14,13 @@
 3. Verify and install required tools (Node.js 21+ and pnpm)
 4. (Optional) Set up audio transcription
 5. Run the HLDK server
-6. Access the web UI in your browser
+6. Access the web UI in your browser at http://localhost:3010
+7. Import your local git repo as a workspace
+8. Chat with the SE Agent to make updates to your system
 
 For detailed instructions, see the sections below.
+
+If you have questions then feel free to email: adam@higherleveldev.com
 
 ## What is this?
 
@@ -101,14 +105,12 @@ Once you have completed the setup steps above, you can start the HLDK server usi
    ```
 
    This script will:
-   - Check if Node.js is installed
-   - Verify the existence of the server file
    - Install or update npm packages using pnpm
    - Start the HLDK server
 
 3. Wait for the server to start. You should see a message indicating that the server is running.
 
-4. Once the server is running, you can access the web UI by opening a web browser and navigating to the address displayed in the console (typically http://localhost:3000).
+4. Once the server is running, you can access the web UI by opening a web browser and navigating to: http://localhost:3010
 
 If you encounter any issues while starting the server, check the console output for error messages. Make sure you have completed all the setup steps, including setting your Anthropic API key in the `.env` file and installing the required tools.
 
