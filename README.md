@@ -54,3 +54,25 @@ These scripts will:
 The scripts will provide feedback on what actions are being taken. If any errors occur during the process, the script will exit and display an error message.
 
 Note: On macOS/Linux, you may need to run the script with sudo permissions if you encounter permission errors.
+
+### Audio Transcription Setup
+
+The Higher Level Dev Kit includes support for audio transcription using the faster-whisper library. To set up the audio transcription feature, follow these steps:
+
+1. Make sure you have Python3 and pip installed on your system. If not, the installation script will attempt to install them for you.
+
+2. Run the install-faster-whisper.sh script:
+
+   ```
+   ./scripts/install-faster-whisper.sh
+   ```
+
+   This script will:
+   - Check if Python3 and pip are installed, and install them if necessary.
+   - Install the faster-whisper-cli package using pip.
+
+3. After running the script, the faster-whisper-cli should be installed and ready to use with the Higher Level Dev Kit.
+
+Note: The installation script supports macOS and Linux. For Windows users, you may need to install Python3, pip, and faster-whisper-cli manually.
+
+If you encounter any issues during the installation, please refer to the error messages in the console or seek assistance from the project maintainers.
