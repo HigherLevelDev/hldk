@@ -46,3 +46,11 @@ You need NodeJS 20 or higher. You can run one of the scripts to install/upgrade:
 #### Windows
 
     ./scripts/install-node.bat
+
+### Install pnpm
+
+After installing Node.js, you need to install pnpm. You can do this by running:
+
+    npm install -g pnpm
+
+This will install pnpm globally on your system.
