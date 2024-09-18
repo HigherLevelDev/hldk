@@ -117,3 +117,17 @@ Once you have completed the setup steps above, you can start the HLDK server usi
 If you encounter any issues while starting the server, check the console output for error messages. Make sure you have completed all the setup steps, including setting your Anthropic API key in the `.env` file and installing the required tools.
 
 To stop the server, you can use `Ctrl+C` in the terminal where the server is running.
+
+## Higher Level Dev Guide
+
+We have created a comprehensive guide to help you understand and use the Higher Level Development Kit (HLDK) effectively. This guide serves as a manual for the system, providing detailed information about its components, usage instructions, and best practices.
+
+The guide covers topics such as:
+
+1. Introduction to HLDK
+2. Getting Started
+3. Core Components
+4. Advanced Usage
+5. Troubleshooting
+
+To access the guide, please open the [index page](guide/index.md) in the `guide` directory. This living document will be updated regularly with new information and examples to help you make the most of the HLDK system.
