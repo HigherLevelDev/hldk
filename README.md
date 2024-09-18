@@ -7,6 +7,17 @@
 <b>Take command of your own set of Software Engineering Agents</b><br><br>
 </p>
 
+## Quick Start
+
+1. Clone the repository
+2. Set up your Anthropic API key in `.env`
+3. Verify and install required tools (Node.js 21+ and pnpm)
+4. (Optional) Set up audio transcription
+5. Run the HLDK server
+6. Access the web UI in your browser
+
+For detailed instructions, see the sections below.
+
 ## What is this?
 
 A node based server and web UI that allows you to develop at a 
@@ -23,9 +34,9 @@ If you don't already have an API account with Anthropic then sign up at https://
 <p></p>
 Then go to settings (top right) --> Api Keys  --> Create Key
 <p></p>
-Then create a .env file under the server folder and add your key with something like:
+Then create a .env file in the root of this repo and add your key with something like:
 
-    echo "ANTHROPIC_API_KEY=<your-anthropic-api-key>" > ./server/.env
+    echo "ANTHROPIC_API_KEY=<your-anthropic-api-key>" > .env
 
 #### A note about Anthropic credits and paying for Claude
 
@@ -76,3 +87,29 @@ The Higher Level Dev Kit includes support for audio transcription using the fast
 Note: The installation script supports macOS and Linux. For Windows users, you may need to install Python3, pip, and faster-whisper-cli manually.
 
 If you encounter any issues during the installation, please refer to the error messages in the console or seek assistance from the project maintainers.
+
+## Running the HLDK Server
+
+Once you have completed the setup steps above, you can start the HLDK server using the provided script. Follow these steps:
+
+1. Open a terminal and navigate to the root directory of the HLDK project.
+
+2. Run the following command:
+
+   ```
+   ./hldk.sh
+   ```
+
+   This script will:
+   - Check if Node.js is installed
+   - Verify the existence of the server file
+   - Install or update npm packages using pnpm
+   - Start the HLDK server
+
+3. Wait for the server to start. You should see a message indicating that the server is running.
+
+4. Once the server is running, you can access the web UI by opening a web browser and navigating to the address displayed in the console (typically http://localhost:3000).
+
+If you encounter any issues while starting the server, check the console output for error messages. Make sure you have completed all the setup steps, including setting your Anthropic API key in the `.env` file and installing the required tools.
+
+To stop the server, you can use `Ctrl+C` in the terminal where the server is running.
