@@ -46,3 +46,6 @@ pnpm install
 # Start the server
 echo "Starting HLDK server..."
 start_server
+
+# Keep the script running and capture any errors
+wait $SERVER_PID || { echo "Server process exited with an error. Exiting."; exit 1; }
