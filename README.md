@@ -35,22 +35,22 @@ YMMV based on repo size etc. You can set limits in the Anthropic Console to prot
 I suggest you have your own Anthropic account and either expense it or use a company debit/credit card.
 If you try to share an API key among developers then you may well run into per month usage limits or rate limits. 
 
-### Install or upgrade NodeJS
+### Verify and Install Required Tools
 
-You need NodeJS 20 or higher. You can run one of the scripts to install/upgrade:
+We provide scripts to automatically verify and install the required tools (Node.js 21+ and pnpm). Run the appropriate script for your operating system:
 
-#### MacOSX or Linux
+#### macOS or Linux
 
-    ./scripts/install-node.sh
+    ./scripts/verify-tools.sh
 
 #### Windows
 
-    ./scripts/install-node.bat
+    .\scripts\verify-tools.bat
 
-### Install pnpm
+These scripts will:
+1. Check if Node.js is installed. If not, it will install Node.js 21. If an older version is found, it will upgrade to Node.js 21.
+2. Check if pnpm is installed. If not, it will install pnpm globally.
 
-After installing Node.js, you need to install pnpm. You can do this by running:
+The scripts will provide feedback on what actions are being taken. If any errors occur during the process, the script will exit and display an error message.
 
-    npm install -g pnpm
-
-This will install pnpm globally on your system.
+Note: On macOS/Linux, you may need to run the script with sudo permissions if you encounter permission errors.
