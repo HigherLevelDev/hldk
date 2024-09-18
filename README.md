@@ -13,7 +13,7 @@
 2. Set up your Anthropic API key in `.env`
 3. Verify and install required tools (Node.js 21+ and pnpm)
 4. (Optional) Set up audio transcription
-5. Run the HLDK server
+5. Run the HLDK server with ./hldk.sh
 6. Access the web UI in your browser at http://localhost:3010
 7. Import your local git repo as a workspace
 8. Chat with the SE Agent to make updates to your system
@@ -21,6 +21,8 @@
 For detailed instructions, see the sections below.
 
 If you have questions then feel free to email: adam@higherleveldev.com
+
+Or better yet, [join the slack here](https://join.slack.com/t/higherleveldevgroup/shared_invite/zt-2qsik2mti-Y8y_VjO2GFvVqBI_H~JeEA).
 
 ## What is this?
 
