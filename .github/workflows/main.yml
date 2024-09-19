@@ -1,40 +1,60 @@
-name: Create Release
+name: Create Release and Tag
 
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/**/*.yml'
+      - '.gitignore'
 
 jobs:
-  create-release:
+  create-release-and-tag:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-      - name: Get version from package.json
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
+      - name: Get previous tag
+        id: previoustag
+        run: echo "previous_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo '')" >> $GITHUB_ENV
 
-      - name: Check if release exists
-        id: check_release
-        run: |
-          release_exists=$(curl -s -o /dev/null -w "%{http_code}" https://api.github.com/repos/${{ github.repository }}/releases/tags/v${{ steps.package-version.outputs.current-version }})
-          if [ "$release_exists" = "200" ]; then
-            echo "Release already exists. Skipping release creation."
-            echo "exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "exists=false" >> $GITHUB_OUTPUT
-          fi
+      - name: Create Tag
+        id: create_tag
+        uses: jaywcjlove/create-tag-action@main
+        if: env.previous_tag
+        with:
+          package-path: ./package.json
+
+      - name: Generate Changelog
+        id: changelog
+        uses: jaywcjlove/changelog-generator@main
+        if: steps.create_tag.outputs.successful == 'true'
+        with:
+          head-ref: ${{steps.create_tag.outputs.version}}
+          filter-author: (jaywcjlove|小弟调调™|dependabot\[bot\]|Renovate Bot)
+          filter: (^[\s]+?[R|r]elease)|(^[R|r]elease)
 
       - name: Create Release
-        if: steps.check_release.outputs.exists == 'false'
-        uses: softprops/action-gh-release@v2
+        uses: jaywcjlove/create-tag-action@main
+        if: steps.create_tag.outputs.successful == 'true'
         with:
-          tag_name: v${{ steps.package-version.outputs.current-version }}
-          name: Release v${{ steps.package-version.outputs.current-version }}
-          body: "This is an automated release"
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+          version: ${{steps.create_tag.outputs.version}}
+          release: true
+          body: |
+            ${{ steps.changelog.outputs.compareurl }}
+            ${{ steps.changelog.outputs.changelog }}
+
+      - name: Print Version Info
+        run: |
+          echo "version - ${{ steps.create_tag.outputs.version }}"
+          echo "versionNumber - ${{ steps.create_tag.outputs.versionNumber }}"
+          echo "majorVersion - ${{ steps.create_tag.outputs.majorVersion }}"
+          echo "minorVersion - ${{ steps.create_tag.outputs.minorVersion }}"
+          echo "patchVersion - ${{ steps.create_tag.outputs.patchVersion }}"
+          echo "preversion - ${{ steps.create_tag.outputs.preversion }}"
+          echo "successful - ${{ steps.create_tag.outputs.successful }}"
