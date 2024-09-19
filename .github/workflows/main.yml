@@ -36,3 +36,5 @@ jobs:
           body: "This is an automated release"
           draft: false
           prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
