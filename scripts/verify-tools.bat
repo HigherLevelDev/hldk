@@ -6,8 +6,8 @@ echo Verifying and installing required tools...
 :: Check for Node.js
 where node >nul 2>nul
 if %errorlevel% neq 0 (
-    echo Node.js not found. Installing Node.js 21...
-    powershell -Command "Invoke-WebRequest https://nodejs.org/dist/v21.6.1/node-v21.6.1-x64.msi -OutFile node-installer.msi"
+    echo Node.js not found. Installing Node.js 20...
+    powershell -Command "Invoke-WebRequest https://nodejs.org/dist/v20.11.1/node-v20.11.1-x64.msi -OutFile node-installer.msi"
     msiexec /i node-installer.msi /qn
     if !errorlevel! neq 0 (
         echo Failed to install Node.js. Please check your internet connection and try again.
@@ -16,9 +16,9 @@ if %errorlevel% neq 0 (
     del node-installer.msi
 ) else (
     for /f "tokens=1,2,3 delims=." %%a in ('node -v') do set nodeVersion=%%a
-    if !nodeVersion! lss v21 (
-        echo Upgrading Node.js to version 21...
-        powershell -Command "Invoke-WebRequest https://nodejs.org/dist/v21.6.1/node-v21.6.1-x64.msi -OutFile node-installer.msi"
+    if !nodeVersion! lss v20 (
+        echo Upgrading Node.js to version 20...
+        powershell -Command "Invoke-WebRequest https://nodejs.org/dist/v20.11.1/node-v20.11.1-x64.msi -OutFile node-installer.msi"
         msiexec /i node-installer.msi /qn
         if !errorlevel! neq 0 (
             echo Failed to upgrade Node.js. Please check your internet connection and try again.
@@ -26,7 +26,7 @@ if %errorlevel% neq 0 (
         )
         del node-installer.msi
     ) else (
-        echo Node.js 21 or higher is already installed.
+        echo Node.js 20 or higher is already installed.
     )
 )
 
