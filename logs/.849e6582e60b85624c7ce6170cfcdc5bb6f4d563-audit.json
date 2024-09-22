@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/Users/adam/dev/higherleveldev/hldk/logs/.849e6582e60b85624c7ce6170cfcdc5bb6f4d563-audit.json",
+    "files": [
+        {
+            "date": 1726909728613,
+            "name": "/Users/adam/dev/higherleveldev/hldk/logs/hldk-server-2024-09-21.log",
+            "hash": "dd375aec268c6206214e4a40b467232886623adc31593f9397b484bb2d6c1105"
+        }
+    ],
+    "hashType": "sha256"
+}
