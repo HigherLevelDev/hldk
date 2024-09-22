@@ -24,6 +24,8 @@ node_modules/
 **/tmp
 **/temp
 
+logs
+
 ## test
 **/coverage
 
