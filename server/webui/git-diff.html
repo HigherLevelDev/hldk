@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/github.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css"
+    />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+  </head>
+  <script>
+    async function fetchDiff(workspaceName, hash) {
+      const response = await fetch(`/api/git/${workspaceName}/diff/${hash}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch diff');
+      }
+      return await response.text();
+    }
+
+    document.addEventListener('DOMContentLoaded', async function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const workspaceName = urlParams.get('workspaceName');
+      const hash = urlParams.get('hash');
+
+      if (!workspaceName || !hash) {
+        document.getElementById('myDiffElement').innerHTML = 'Missing workspaceName or hash parameter';
+        return;
+      }
+
+      try {
+        const diffString = await fetchDiff(workspaceName, hash);
+        var targetElement = document.getElementById('myDiffElement');
+        var configuration = {
+          drawFileList: true,
+          fileListToggle: true,
+          fileListStartVisible: true,
+          fileContentToggle: true,
+          matching: 'lines',
+          outputFormat: 'side-by-side',
+          synchronisedScroll: true,
+          highlight: true,
+          renderNothingWhenEmpty: false,
+        };
+        var diff2htmlUi = new Diff2HtmlUI(targetElement, diffString, configuration);
+        diff2htmlUi.draw();
+        diff2htmlUi.highlightCode();
+      } catch (error) {
+        document.getElementById('myDiffElement').innerHTML = 'Error fetching diff: ' + error.message;
+      }
+    });
+  </script>
+  <body>
+    <div id="myDiffElement"></div>
+  </body>
+</html>

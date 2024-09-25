@@ -38,6 +38,15 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
 /**
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ *
+ * @license MIT <https://opensource.org/licenses/MIT>
+ * @author Lea Verou <https://lea.verou.me>
+ * @namespace
+ * @public
+ */
+
+/**
 * @vue/reactivity v3.5.3
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
