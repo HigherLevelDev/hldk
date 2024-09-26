@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Higher Level Dev Kit" src="assets/favicon.svg" width=200px/>
+  <img alt="Higher Level Dev Kit" src="assets/favicon.svg" width="200px"/>
 </p>
 <h1 align="center">Higher Level Dev Kit</h1>
 
@@ -26,9 +26,9 @@ Or better yet, [join the slack here](https://join.slack.com/t/higherleveldevgrou
 
 ## Higher Level Dev Guide
 
-We have created a guide to help you transition to the world of higher level development.
+We are creating a guide to help you transition to the world of higher level development.
 
-The guide covers topics such as:
+The guide covers (or will cover!) topics such as:
 
 1. Introduction to Higher Level Development
 2. How the AI Software Engineering Agent works
@@ -38,6 +38,7 @@ The guide covers topics such as:
 
 To access the guide, please open the [index page](guide/index.md) in the `guide` directory. This living document will be updated regularly with new information and examples to help you make the most of the HLDK system.
 
+**NOTE that the guide is a work in progress and is not complete yet....**
 
 ## What is this?
 
@@ -132,3 +133,83 @@ Once you have completed the setup steps above, you can start the HLDK server usi
 If you encounter any issues while starting the server, check the console output for error messages. Make sure you have completed all the setup steps, including setting your Anthropic API key in the `.env` file and installing the required tools.
 
 To stop the server, you can use `Ctrl+C` in the terminal where the server is running.
+
+## Workspaces
+
+
+<img alt="Higher Level Dev Kit" src="assets/workspaces-page.png" width="800"/>
+
+
+### Import a Local Repo
+Before you can start developing in tandem with the SE Agent you will need to configure a workspace. To do this select **Workspaces**
+from the left hand menu and then **Import Local Repo** where you will be asked for the full path to the git repo. It will take the dir name
+to be the name of the workspace unless you choose to override by providing a specific name for your repo.
+
+### Default Workspace
+The first Workspace that you set up will be your default workspace and will appear at the top of the drop down on the SE Agent page.
+If you want to select a different workspace as your default then you can do that from the Workspaces page by selecting the workspace
+in the table and choosing
+
+### Build/Test Command
+You can set a command or script for the SE Agent to run after it makes its code changes but before committing them to git. 
+Just hit **Edit** with the workspace selected and enter the command. Note that the Agent may not always run the command automatically
+and if it doesn't then a simple "test" prompt should suffice. The Agent should iterate and keep trying to fix stuff
+until the tests pass.
+
+## Software Engineering Agent
+
+
+<img alt="Higher Level Dev Kit" src="assets/se-agent.png" width="800px"/>
+
+### Sessions
+Create a new session for each new mini-spec that you want to send to the agent. 
+If you try to do too much on one session then the agent may get confused. Also be sure to select the correct Workspace or the agent will
+definitely get confused!
+
+If you want to make tweaks to the code that was just generated then that is usually fine to do in the same session.
+
+### Chatting with the agent
+
+Send specs or commands by filling out the text area at the bottom that says _"Type your message"_ and then clicking the Send or simply hitting **Enter**.
+
+If you want a new line you can use **Shift+Enter**
+
+The agent can see all the files in the git repo but it may need hints as to where to look for things.
+
+You can say things like: 
+
+* _"Update the session page in the web ui to do x, y, z..."_
+* _"Look at mutation service and repo and make changes to do x,y,z..."_
+* _"Use the person module as an example and implement a new module called Foo with props (x,y,z) - implement the repo, service, controller with unit tests for all"_
+
+### Voice Transcription
+
+If you want to provide your specs via voice then make sure you have installed the faster whisper cli (see above) and then
+just **HOLD** the mic button down... once the mic button turns red then it is listening and will continue to listen until you let
+go of the button at which point the recording is streamed to the server and then to faster whisper and the resulting text
+will appear in the text area. You will then still need to submit this text by pressing **Enter** or clicking the send button.
+
+### Aborting
+
+If the agent seems to be going awry then you can interrupt what it is doing by hitting the red stop button.
+
+### Updates
+
+During the process of making code updates the SE Agent will update some source files by using its Search & Replace
+file update tool. Each operation with this tool results in an entry to the Updates panel on the right. You may see multiple
+updates for a single file and that is normal because in large files the agent will not want to have to update the whole file
+at once (lots of expensive output tokens) and so it uses multiple Search & Replace edits (find the search text in the file and replace it with the replace text)
+to more efficiently update multiple bits.
+
+In the Update panel you have the choice of viewing the Description which shows the Search & Replace block that the agent has
+generated to make the edit or either the Before or After panels which show the full file contents immediately before or after
+the edit. You can double-click on the Before or After text to copy the file contents to the clipboard in case that's useful.
+
+### Git Log
+
+As an alternative to the Updates panel you can switch to see the Git Log which shows the last 10 or so commits.
+
+You can choose to revert the last commit by clicking on the little red revert icon.
+
+Or you can choose to open a new browser tab to see the unified Git diff for the commit by clicking on the blue git icon.
+
