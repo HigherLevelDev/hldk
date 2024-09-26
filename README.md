@@ -207,11 +207,15 @@ the edit. You can double-click on the Before or After text to copy the file cont
 
 ### Git Log
 
+<img alt="Higher Level Dev Kit" src="assets/git-log.png" width="600px"/>
+
 As an alternative to the Updates panel you can switch to see the Git Log which shows the last 10 or so commits.
 
 You can choose to revert the last commit by clicking on the little red revert icon.
 
 Or you can choose to open a new browser tab to see the unified Git diff for the commit by clicking on the blue git icon.
+
+<img alt="Higher Level Dev Kit" src="assets/git-diff.png" width="600px"/>
 
 ## Sessions Page
 
