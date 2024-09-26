@@ -148,7 +148,7 @@ to be the name of the workspace unless you choose to override by providing a spe
 ### Default Workspace
 The first Workspace that you set up will be your default workspace and will appear at the top of the drop down on the SE Agent page.
 If you want to select a different workspace as your default then you can do that from the Workspaces page by selecting the workspace
-in the table and choosing
+in the table and hitting **Set as Default**
 
 ### Build/Test Command
 You can set a command or script for the SE Agent to run after it makes its code changes but before committing them to git. 
