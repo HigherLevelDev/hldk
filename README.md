@@ -223,5 +223,37 @@ with some stats about each session. You can click on the link to take you back t
 Please note that you may not be able to continue with the session if the server has been restarted recently.
 This is because the Snapshotting of session data (for Langgraph) is currently only persisted to RAM and not disk.
 
+## Use a Hints file
+
+The SE Agent will always look for a file called **hints.md** in the root of the git repo and the contents are passed on
+to Claude. You should add one to your repo and let the agent know about any helpful hints for adding code to the repo.
+
+It should contain things like:
+
+* How you want your code laid out (if it's not already obvious from the existing code)
+* Maybe what package manager you are using (if it's not obvious from the file tree)
+* Point to good examples of things (e.g. services, entities etc) to look at when adding a new one of those
+* Tips about architecture or performance stuff
+
+Here is an example from the HigherLevelDevKit itself:
+
+<pre>
+   # These are hints for HLDK or any other AI agent to help it understand the codebase.
+   
+   # DATABASE CHANGES
+   
+   When making changes to the database schema you need to add a new Flyway migration script to the `/migrations` directory.
+   
+   Remember:
+   - Use pnpm for all package management calls and NOT npm or yarn.
+   - IMPORTANT: Never run pnpm in the root directory
+   - For server packages changes you will need to run 'cd hldk-server && pnpm add <package-name>'
+   - For client packages changes you will need to run 'cd vitify-webui && pnpm add <package-name>'
+   - For ID generation always use ulid - we have already added the ulid package to the project.
+   - When generating db related code always try to minimise the number of db round trips - so use group by and in clauses where possible etc.
+</pre>
+
+
+
 
 
