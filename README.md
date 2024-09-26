@@ -213,3 +213,15 @@ You can choose to revert the last commit by clicking on the little red revert ic
 
 Or you can choose to open a new browser tab to see the unified Git diff for the commit by clicking on the blue git icon.
 
+## Sessions Page
+
+<img alt="Higher Level Dev Kit" src="assets/sessions-page.png" width="800px"/>
+
+If you need to go back to a previous session then you should be able to find it on the recent sessions page along
+with some stats about each session. You can click on the link to take you back to the SE Agent with that session loaded.
+
+Please note that you may not be able to continue with the session if the server has been restarted recently.
+This is because the Snapshotting of session data (for Langgraph) is currently only persisted to RAM and not disk.
+
+
+
