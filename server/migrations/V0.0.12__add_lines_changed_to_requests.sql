@@ -1,2 +1,2 @@
-ALTER TABLE requests ADD COLUMN linesChanged INT DEFAULT 0;
-ALTER TABLE requests ADD COLUMN testLinesChanged INT DEFAULT 0;
+ALTER TABLE requests ADD COLUMN linesChanged INTEGER DEFAULT 0;
+ALTER TABLE requests ADD COLUMN testLinesChanged INTEGER DEFAULT 0;
