@@ -68,25 +68,24 @@ YMMV based on repo size etc. You can set limits in the Anthropic Console to prot
 I suggest you have your own Anthropic account and either expense it or use a company debit/credit card.
 If you try to share an API key among developers then you may well run into per month usage limits or rate limits. 
 
-### Verify and Install Required Tools
+### Install Required Tools
 
-We provide scripts to automatically verify and install the required tools (Node.js 21+ and pnpm). Run the appropriate script for your operating system:
+To run the Higher Level Dev Kit, you need to have Node.js (version 21 or higher) and pnpm installed on your system. If you don't have these tools installed, follow these steps:
 
-#### macOS or Linux
+1. Install Node.js:
+   - Visit the official Node.js website: https://nodejs.org/
+   - Download and install the latest LTS version (21.x or higher)
 
-    ./scripts/verify-tools.sh
+2. Install pnpm:
+   - After installing Node.js, open a terminal or command prompt
+   - Run the following command to install pnpm globally:
+     ```
+     npm install -g pnpm
+     ```
 
-#### Windows
+For more information on installing and using pnpm, visit: https://pnpm.io/installation
 
-    .\scripts\verify-tools.bat
-
-These scripts will:
-1. Check if Node.js is installed. If not, it will install Node.js 21. If an older version is found, it will upgrade to Node.js 21.
-2. Check if pnpm is installed. If not, it will install pnpm globally.
-
-The scripts will provide feedback on what actions are being taken. If any errors occur during the process, the script will exit and display an error message.
-
-Note: On macOS/Linux, you may need to run the script with sudo permissions if you encounter permission errors.
+Once you have Node.js and pnpm installed, you can proceed with the setup of the Higher Level Dev Kit.
 
 ### Audio Transcription Setup
 

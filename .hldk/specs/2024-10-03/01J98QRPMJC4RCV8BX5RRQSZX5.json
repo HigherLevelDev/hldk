@@ -1,0 +1,22 @@
+{
+  "spec": "remove the verify-tools.sh/bat scripts and update the readme to tell the user to install node if they don't have it and pnpm and point to the standard urls for those projects",
+  "commitMessage": "",
+  "stats": {
+    "inputTokens": 32113,
+    "outputTokens": 950,
+    "totalTokens": 33063,
+    "cost": 0.08294175000000001,
+    "currency": "gbp",
+    "processingMillis": 16614,
+    "git": {
+      "filesChanged": 4,
+      "insertions": 35,
+      "deletions": 126,
+      "linesChanged": 126,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
