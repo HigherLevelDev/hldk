@@ -183,6 +183,8 @@ You can say things like:
 
 ### Voice Transcription
 
+<img alt="Higher Level Dev Kit" src="assets/mic-input.png" width="400px"/>
+
 If you want to provide your specs via voice then make sure you have installed the faster whisper cli (see above) and then
 just **HOLD** the mic button down... once the mic button turns red then it is listening and will continue to listen until you let
 go of the button at which point the recording is streamed to the server and then to faster whisper and the resulting text
