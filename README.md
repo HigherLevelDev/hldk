@@ -89,7 +89,7 @@ Once you have Node.js and pnpm installed, you can proceed with the setup of the 
 
 ### Audio Transcription Setup
 
-The Higher Level Dev Kit includes support for audio transcription using the faster-whisper library. To set up the audio transcription feature, follow these steps:
+The Higher Level Dev Kit includes support for audio transcription (talk into the mic instead of typing) using the faster-whisper library. To set up the audio transcription feature, follow these steps:
 
 1. Make sure you have Python3 and pip installed on your system. If not, the installation script will attempt to install them for you.
 
