@@ -42,7 +42,7 @@ if not exist "%SERVER_FILE%" (
 
 REM Install npm packages
 echo Installing npm packages...
-pnpm install
+call pnpm install
 if %ERRORLEVEL% NEQ 0 (
     echo Error: Failed to install npm packages.
     exit /b 1
