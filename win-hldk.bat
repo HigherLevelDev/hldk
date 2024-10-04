@@ -61,27 +61,18 @@ if not exist ".env" (
 )
 
 REM Start the server
-setlocal
 set "START_COMMAND=node %SERVER_FILE%"
 echo Starting the server with command: %START_COMMAND%
-
-REM Start the server in a new command window
-start "HLDK Server" cmd /c "%START_COMMAND%"
-if %ERRORLEVEL% NEQ 0 (
-    echo Error: Failed to start the server.
-    endlocal
-    exit /b 1
-) else (
-    echo Server started successfully.
-)
-endlocal
-
-REM Keep the script running
 echo.
-echo Press any key to stop the server and exit.
-pause >nul
 
-REM Stop the server
-taskkill /f /fi "WindowTitle eq HLDK Server*"
+REM Start the server in the current command shell
+%START_COMMAND%
+if %ERRORLEVEL% NEQ 0 (
+    echo Error: Server process exited with an error. Exiting.
+    exit /b 1
+)
 
+REM The server process has been terminated
+echo.
+echo Server has been stopped.
 exit /b 0
