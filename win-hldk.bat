@@ -5,7 +5,7 @@ REM =========================================
 
 REM Function to handle errors
 :handle_error
-echo Error: %~1
+echo Error: %*
 exit /b 1
 
 REM Start of the script
