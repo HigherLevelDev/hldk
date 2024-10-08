@@ -1,0 +1,22 @@
+{
+  "spec": "add a .nvmrc file to the repo",
+  "commitMessage": "Add .nvmrc file specifying Node.js version 20.11.1",
+  "stats": {
+    "inputTokens": 13986,
+    "outputTokens": 434,
+    "totalTokens": 14420,
+    "cost": 0.036351,
+    "currency": "gbp",
+    "processingMillis": 12251,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 1,
+      "deletions": 0,
+      "linesChanged": 1,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
