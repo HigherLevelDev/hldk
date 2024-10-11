@@ -1,1 +1,0 @@
-ALTER TABLE items ADD COLUMN cost DECIMAL(10, 6);

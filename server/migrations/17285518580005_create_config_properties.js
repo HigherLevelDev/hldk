@@ -1,0 +1,1 @@
+exports.up=async function(a){await a.schema.hasTable("config_properties")||await a.schema.createTable("config_properties",(function(a){a.string("name",255).primary(),a.text("value")}))},exports.down=async function(a){await a.schema.dropTableIfExists("config_properties")};

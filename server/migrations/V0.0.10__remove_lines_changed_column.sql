@@ -1,1 +1,0 @@
-ALTER TABLE mutations DROP COLUMN linesChanged;

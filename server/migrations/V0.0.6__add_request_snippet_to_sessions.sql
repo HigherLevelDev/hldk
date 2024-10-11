@@ -1,1 +1,0 @@
-ALTER TABLE sessions ADD COLUMN requestSnippet TEXT DEFAULT '';

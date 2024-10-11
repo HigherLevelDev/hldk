@@ -1,3 +1,0 @@
-ALTER TABLE items ADD COLUMN input_tokens INTEGER;
-ALTER TABLE items ADD COLUMN output_tokens INTEGER;
-ALTER TABLE items ADD COLUMN total_tokens INTEGER;

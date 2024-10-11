@@ -1,1 +1,0 @@
-ALTER TABLE mutations ADD COLUMN linesChanged INTEGER DEFAULT 0;

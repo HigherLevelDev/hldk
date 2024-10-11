@@ -1,1 +1,0 @@
-ALTER TABLE mutations ADD COLUMN requestId TEXT;
