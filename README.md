@@ -28,7 +28,7 @@ Key Features:
 4. Run the HLDK server with ./hldk.sh
 5. Access the web UI in your browser at http://localhost:3010
 6. Get your free API Key from here: https://higherlevel.dev/app
-7. Get a Claude API Key from Anthropic and enter it into the config page
+7. Get a Claude API Key from https://console.anthropic.com and enter it into the config page
 8. Import your local git repo as a workspace 
 9. Chat with the SE Agent to make updates to your system
 
@@ -54,27 +54,9 @@ To access the guide, please open the [index page](guide/index.md) in the `guide`
 
 **NOTE that the guide is a work in progress and is not complete yet....**
 
-## What is this?
-
-A node based server and web UI that allows you to develop at a 
-higher level (in English) by offloading the actual coding to an 
-LLM-powered Software Engineering Agent. 
-<p></p>
-Currently we support Anthropic Claude Sonnet 3.5
-
 ## Getting Started
 
-### Set your Anthropic API Key in the server .env file
-
-If you don't already have an API account with Anthropic then sign up at https://console.anthropic.com
-<p></p>
-Then go to settings (top right) --> Api Keys  --> Create Key
-<p></p>
-Then create a .env file in the root of this repo and add your key with something like:
-
-    echo "ANTHROPIC_API_KEY=<your-anthropic-api-key>" > .env
-
-#### A note about Anthropic credits and paying for Claude
+### A note about Anthropic credits and paying for Claude
 
 You will need to add a debit or credit card and purchase some credits.
 A developer working flat out most days is going to rack up something like £100 worth of tokens per month.
@@ -146,6 +128,7 @@ Once you have completed the setup steps above, you can start the HLDK server usi
 If you encounter any issues while starting the server, check the console output for error messages. Make sure you have completed all the setup steps, including setting your Anthropic API key in the `.env` file and installing the required tools.
 
 To stop the server, you can use `Ctrl+C` in the terminal where the server is running.
+
 
 ## Workspaces
 
