@@ -1,0 +1,24 @@
+{
+  "spec": "update the license to re-word the commercial use stuff.... limited commercial use is fine.. e.g. it's okay to try it out and use it for a few months to see if it works for you.. after that you should contact adam@higherleveldev.com to discuss a commercial arrangement which will be very reasonably priced",
+  "commitMessage": "Update LICENSE to allow limited commercial use and trial period",
+  "stats": {
+    "inputTokens": 3147,
+    "cacheWriteTokens": 3672,
+    "cacheReadTokens": 7344,
+    "outputTokens": 1088,
+    "totalTokens": null,
+    "cost": 0.03130065,
+    "currency": "gbp",
+    "processingMillis": 19456,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 6,
+      "deletions": 4,
+      "linesChanged": 6,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
