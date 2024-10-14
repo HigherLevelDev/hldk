@@ -20,6 +20,11 @@ Key Features:
 * Git integration for version control
 * Automatically runs and fixes tests
 
+
+## HLDK in Action
+
+https://github.com/user-attachments/assets/0cf9fa95-d0b9-4bac-ae8c-c24d9731bed0
+
 ## Quick Start
 
 1. Clone the repository
