@@ -260,6 +260,9 @@ Here is an example from the HigherLevelDevKit itself:
    - When generating db related code always try to minimise the number of db round trips - so use group by and in clauses where possible etc.
 </pre>
 
+## Contact
+
+If you have any questions then please email adam@higherleveldev.com or [join the Slack here](https://join.slack.com/t/higherleveldevgroup/shared_invite/zt-2qsik2mti-Y8y_VjO2GFvVqBI_H~JeEA).
 
 
 
