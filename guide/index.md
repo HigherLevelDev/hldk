@@ -39,6 +39,28 @@ Once you learn how to do it, there's no going back IMHO... happy prompting... :-
 
 ## How the AI Software Engineering Agent works
 
-To begin using HLDK, make sure you have completed the installation process as described in the main README.md file. Once installed, you can...
+The first thing we do when receiving each request is to look at the workspace files and produce a "repo tree" which
+is included in the request to the Large Language Model so it can see the layout of your project. It has a read_file tool
+which it can use to read in the contents of any file it wished to see. It will honour .gitignore and so won't see any ignored
+files. You can additionally add a .hldkignore file if you want to ignore files which you do still need in git. This might be needed
+if you have a really large repository because the repo tree could be very large and sending it up to the LLM could become expensive.
+For Claude we do prompt caching so that does eleviate some of the issues as you will be mostly leveraging cache read tokens for the
+repo map instead of expensive input tokens.
 
-[More content to be added in future updates]
+It's good practice to give the LLM some hints about where it should look before trying to make updates but you don't have to
+remember exact names or paths etc. So something like "Update the foo widget to do X,Y and Z instead of bar" should suffice. The
+agent will pull in the files it needs then figure out what changes need to be made and then it will use the update_file tool to
+make a series of edits to one or more files. Each edit operation consists of 3 parameters: file path, the search block and the 
+replace block - so it will open a specific file, locate the position of the search block and then overwrite the search block
+contents with the replace block. In this manner it can efficiently make edits to large files without having to generate a new
+version of the entire file which would end up being very expensive in output tokens.
+
+After making edits, if you have configured a build/test command then the agent should run that and verify everything is still working.
+It's up to you what tests you want to run for every update but I suggest making the test script execute quite quickly and try to
+cover the most important things to verify that a) everything builds okay and b) the important basic functionality is still working.
+
+The Agent has full command access so you can always say: "run the all-tests script" if you want to specifically test something else.
+
+If the tests fail then the Agent will generally try to fix them (or the offending code) before re-running the tests. Once they are passing
+it will then commit the changes to git (assuming the workspace is a git repo) using the command line and after generating a suitable
+commit message. The Agent is non-deterministic and might occasionally forget to commit. If that happens you can simply prompt it to "commit".

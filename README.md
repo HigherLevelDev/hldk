@@ -7,16 +7,30 @@
 <b>Take command of your own set of Software Engineering Agents</b><br><br>
 </p>
 
+## Summary of the Dev Kit
+
+The Higher Level Dev Kit (HLDK) is a powerful tool that allows you to develop software at a higher level using natural language. It offloads the actual coding to an LLM-powered Software Engineering Agent.
+
+Key Features:
+* Node-based server and easy to use web UI
+* Supports Anthropic Claude Sonnet 3.5 (and also OpenAI & Ollama)
+* Works with existing code bases or a clean slate
+* Audio transcription support (talk instead of type)
+* Workspace management for multiple projects
+* Git integration for version control
+* Automatically runs and fixes tests
+
 ## Quick Start
 
 1. Clone the repository
-2. Set up your Anthropic API key in `.env`
-3. Verify and install required tools (Node.js 21+ and pnpm)
-4. (Optional) Set up audio transcription
-5. Run the HLDK server with ./hldk.sh
-6. Access the web UI in your browser at http://localhost:3010
-7. Import your local git repo as a workspace
-8. Chat with the SE Agent to make updates to your system
+2. Verify and install required tools (Node.js 21+ and pnpm)
+3. (Optional) Set up audio transcription
+4. Run the HLDK server with ./hldk.sh
+5. Access the web UI in your browser at http://localhost:3010
+6. Get your free API Key from here: https://higherlevel.dev/app
+7. Get a Claude API Key from Anthropic and enter it into the config page
+8. Import your local git repo as a workspace 
+9. Chat with the SE Agent to make updates to your system
 
 For detailed instructions, see the sections below.
 
