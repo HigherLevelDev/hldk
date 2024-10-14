@@ -244,7 +244,7 @@ Here is an example from the HigherLevelDevKit itself:
    
    # DATABASE CHANGES
    
-   When making changes to the database schema you need to add a new Flyway migration script to the `/migrations` directory.
+   When making changes to the database schema you need to add a new knex migration script (.js not .ts!) to the `/migrations` directory
    
    Remember:
    - Use pnpm for all package management calls and NOT npm or yarn.
