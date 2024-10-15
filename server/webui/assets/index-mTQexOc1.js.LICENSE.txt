@@ -1,11 +1,11 @@
 /*!
-  * vue-router v4.4.3
+  * vue-router v4.4.5
   * (c) 2024 Eduardo San Martin Morote
   * @license MIT
   */
 
 /*!
- * pinia v2.2.2
+ * pinia v2.2.4
  * (c) 2024 Eduardo San Martin Morote
  * @license MIT
  */
@@ -47,25 +47,25 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**
-* @vue/reactivity v3.5.3
+* @vue/reactivity v3.5.12
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/runtime-core v3.5.3
+* @vue/runtime-core v3.5.12
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/runtime-dom v3.5.3
+* @vue/runtime-dom v3.5.12
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
 
 /**
-* @vue/shared v3.5.3
+* @vue/shared v3.5.12
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
