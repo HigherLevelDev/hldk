@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/0cf9fa95-d0b9-4bac-ae8c-c24d9731bed0
 ## Quick Start
 
 1. Clone the repository
-2. Verify and install required tools (Node.js 21+ and pnpm)
+2. Verify and install required tools (Node.js 20+ and pnpm)
 3. (Optional) Set up audio transcription
 4. Run the HLDK server with ./hldk.sh
 5. Access the web UI in your browser at http://localhost:3010
@@ -71,11 +71,11 @@ If you try to share an API key among developers then you may well run into per m
 
 ### Install Required Tools
 
-To run the Higher Level Dev Kit, you need to have Node.js (version 21 or higher) and pnpm installed on your system. If you don't have these tools installed, follow these steps:
+To run the Higher Level Dev Kit, you need to have Node.js (version 20 or higher) and pnpm installed on your system. If you don't have these tools installed, follow these steps:
 
 1. Install Node.js:
    - Visit the official Node.js website: https://nodejs.org/
-   - Download and install the latest LTS version (21.x or higher)
+   - Download and install the latest LTS version (20.x or higher)
 
 2. Install pnpm:
    - After installing Node.js, open a terminal or command prompt
