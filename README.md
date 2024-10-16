@@ -86,7 +86,13 @@ To run the Higher Level Dev Kit, you need to have Node.js (version 20 or higher)
 
 For more information on installing and using pnpm, visit: https://pnpm.io/installation
 
-Once you have Node.js and pnpm installed, you can proceed with the setup of the Higher Level Dev Kit.
+3. For Windows users:
+   - Install Git CLI tools, which include Git Bash:
+     - Visit the official Git website: https://git-scm.com/download/win
+     - Download and install the Git for Windows installer
+     - During installation, make sure to select the option to include Git Bash
+
+Once you have Node.js, pnpm, and Git CLI tools (for Windows) installed, you can proceed with the setup of the Higher Level Dev Kit.
 
 ### Audio Transcription Setup
 

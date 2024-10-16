@@ -1,0 +1,24 @@
+{
+  "spec": "add a bit to the readme in the appropriate place to say that if running on windows you need to install the git cli tools which includes git bash",
+  "commitMessage": "Update README.md with Git CLI tools installation for Windows users",
+  "stats": {
+    "inputTokens": 7625,
+    "cacheWriteTokens": 3824,
+    "cacheReadTokens": 7648,
+    "outputTokens": 510,
+    "totalTokens": null,
+    "cost": 0.03536955,
+    "currency": "gbp",
+    "processingMillis": 16540,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 7,
+      "deletions": 1,
+      "linesChanged": 7,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
