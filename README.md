@@ -23,7 +23,7 @@ Key Features:
 
 ## HLDK in Action
 
-https://github.com/user-attachments/assets/0cf9fa95-d0b9-4bac-ae8c-c24d9731bed0
+https://github.com/user-attachments/assets/8ec11e01-b513-4acc-9e06-319a2772472e
 
 ## Quick Start
 
