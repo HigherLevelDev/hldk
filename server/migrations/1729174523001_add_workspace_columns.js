@@ -1,0 +1,1 @@
+exports.up=function(e){return e.schema.table("workspaces",(function(e){e.boolean("isLocked").defaultTo(!1),e.boolean("isTemp").defaultTo(!1),e.timestamp("lastAccessedAt")}))},exports.down=function(e){return e.schema.table("workspaces",(function(e){e.dropColumn("isLocked"),e.dropColumn("isTemp"),e.dropColumn("lastAccessedAt")}))};
