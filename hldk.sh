@@ -23,8 +23,12 @@ fi
 
 # Function to start the server
 start_server() {
+    # Set the PLUGIN_DIR environment variable
+    export PLUGIN_DIR="$PWD/server/plugins"
+    
     local start_command="node $SERVER_FILE"
     echo "Starting the server with command: $start_command"
+    echo "PLUGIN_DIR set to: $PLUGIN_DIR"
     env $(cat .env | grep -v '^#' | xargs) $start_command &
     SERVER_PID=$!
 

@@ -1,0 +1,24 @@
+{
+  "spec": "We need to set the PLUGIN_DIR env var when starting the server via hldk.sh",
+  "commitMessage": "Update hldk.sh to set PLUGIN_DIR environment variable",
+  "stats": {
+    "inputTokens": 2080,
+    "cacheWriteTokens": 3986,
+    "cacheReadTokens": 7972,
+    "outputTokens": 901,
+    "totalTokens": null,
+    "cost": 0.027820575,
+    "currency": "gbp",
+    "processingMillis": 23072,
+    "git": {
+      "filesChanged": 5,
+      "insertions": 43,
+      "deletions": 1,
+      "linesChanged": 43,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
