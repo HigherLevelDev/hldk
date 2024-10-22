@@ -266,10 +266,6 @@ Here is an example from the HigherLevelDevKit itself:
    - When generating db related code always try to minimise the number of db round trips - so use group by and in clauses where possible etc.
 </pre>
 
-## Contact
-
-If you have any questions then please email adam@higherleveldev.com or [join the Slack here](https://join.slack.com/t/higherleveldevgroup/shared_invite/zt-2qsik2mti-Y8y_VjO2GFvVqBI_H~JeEA).
-
 ## Implementing a Plugin
 
 The Higher Level Dev Kit supports custom plugins, allowing you to extend its functionality. Here's how to implement a plugin:
@@ -309,7 +305,7 @@ The Higher Level Dev Kit supports custom plugins, allowing you to extend its fun
 
 Remember to follow the existing code style and practices when implementing your plugin. For more detailed information, refer to the plugin development documentation or examine the existing plugins in the `server/plugins/` directory.
 
-## Prompt Placeholders
+### Prompt Placeholders
 
 When implementing the `getSystemPrompt(context)` method in your agent, you can use the following placeholders in your prompt:
 
@@ -324,3 +320,6 @@ When implementing the `getSystemPrompt(context)` method in your agent, you can u
 
 These placeholders will be automatically replaced with their corresponding values when the prompt is generated. Use them to provide context-specific information to your agent.
 
+## Contact
+
+If you have any questions then please email adam@higherleveldev.com or [join the Slack here](https://join.slack.com/t/higherleveldevgroup/shared_invite/zt-2qsik2mti-Y8y_VjO2GFvVqBI_H~JeEA).
