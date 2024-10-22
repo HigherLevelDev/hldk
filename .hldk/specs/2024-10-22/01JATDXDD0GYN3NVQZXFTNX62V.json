@@ -1,0 +1,24 @@
+{
+  "spec": "Summarize the ILPA DDQ doc",
+  "commitMessage": "Remove unused files and directories from .gitignore",
+  "stats": {
+    "inputTokens": 35948,
+    "cacheWriteTokens": 1095,
+    "cacheReadTokens": 1095,
+    "outputTokens": 581,
+    "totalTokens": null,
+    "cost": 0.0907453125,
+    "currency": "gbp",
+    "processingMillis": 20545,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 0,
+      "deletions": 2,
+      "linesChanged": 2,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
