@@ -1,0 +1,24 @@
+{
+  "spec": "add a new plugin called docx-agent which uses a read_docx_text tool to extract the text from a word doc like the one under files. Use the mammoth node lib to create the tool. Add the filetree to the prompt and create the read_docx_text tool by expecting the path to the file (inside the workspace) and using mammoth to extract the raw text and do with it what ever the user asks.",
+  "commitMessage": "Added ignore rules for 'files' and 'test/coverage' directories.",
+  "stats": {
+    "inputTokens": 3819,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 0,
+    "outputTokens": 424,
+    "totalTokens": 4243,
+    "cost": 0,
+    "currency": "gbp",
+    "processingMillis": 3523,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 2,
+      "deletions": 0,
+      "linesChanged": 2,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
