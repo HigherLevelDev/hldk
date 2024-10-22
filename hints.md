@@ -42,12 +42,49 @@ A plugin can use any number of custom tools or just reference the existing set o
 If you asked to add a new Plugin and/or Tool then grab the echo-agent as an example.
 Each plugin can consist of 0 or 1 agents and 0 to N tools.
 
-Each Tool must extend langchain Tool (see the current-date-tool.js for an example)
-
 Each Agent must implement the getSystemPrompt method and can optionally implement the getToolNames method.
 See echo-agent.js for an example.
 
-Only those 2 methods should be needed.
+Only those 2 methods should be needed like this:
+
+echo-agent.js
+```javascript
+module.exports = {
+  async getSystemPrompt(context) {
+    return `You are an Echo Agent. Your task is to repeat the user's message and add the current date.
+    IMPORTANT: Format the response as JSON and only return the JSON string: {"echo": "<message> <current date>"}
+  `;
+  },
+  async getToolNames(context) {
+    return ['current_date'];
+  }
+};
+```
+
+Each Tool must extend langchain Tool and MUST provide the **createTool** factory method.
+
+For example current-date-tool.js looks like this:
+```javascript
+const { Tool } = require('langchain/tools');
+
+class CurrentDate extends Tool {
+  name = 'current_date';
+
+  description = 'Returns the current date as an ISO string';
+
+  async _call() {
+    return new Date().toISOString().split('T')[0];
+  }
+}
+
+function createTool(requestContext) {
+  return new CurrentDate();
+}
+
+module.exports = { createTool };
+```
+
+Note that RequestContext contains the properties described below (and requestContext.workspace.repoBaseDir is useful!)
 
 After adding a new plugin - tell them that they can invoke the agent with a http POST request to:
 

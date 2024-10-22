@@ -6,6 +6,7 @@
   "private": true,
   "license": "custom",
   "dependencies": {
+    "mammoth": "^1.6.0",
     "@langchain/anthropic": "^0.3.3",
     "@langchain/core": "^0.3.11",
     "@langchain/groq": "^0.1.2",
