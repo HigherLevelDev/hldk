@@ -54,3 +54,18 @@ After adding a new plugin - tell them that they can invoke the agent with a http
 POST http://localhost:3010/agents/<agent-name>/responseContent
 
 If they want the agent to return a JSON response then set Accepts header to application/json
+
+# Prompt Placeholders
+
+When implementing the `getSystemPrompt(context)` method in your agent, you can use the following placeholders in your prompt:
+
+- `${context.sessionId}`: The current session ID
+- `${context.requestId}`: The current request ID
+- `${context.workspace.name}`: The name of the current workspace
+- `${context.workspace.repoBaseDir}`: The base directory of the repository
+- `${context.workspace.remoteRepoUrl}`: The remote URL of the repository
+- `${context.workspace.buildOrTestCommand}`: The build or test command for the workspace
+- `${context.repositoryTree()}`: The directory tree of the repository
+- `${context.repositoryHints()}`: The contents of the hints.md file in the repository root
+
+These placeholders will be automatically replaced with their corresponding values when the prompt is generated.

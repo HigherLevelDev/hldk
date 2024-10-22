@@ -1,0 +1,24 @@
+{
+  "spec": "Update both the hints.md and the readme to add in section about prompt placeholders...\nThe request context is passed into the getSystemPrompt(context) method... and it looks like:\n\nexport class RequestContext {\n  constructor(\n    public readonly workspace: Workspace,\n    public readonly requestId: string,\n    public readonly sessionId: string\n  ) {}\n\n  repositoryTree(): string {\n    return generateTree(this.workspace.repoBaseDir);\n  }\n\n  repositoryHints(): string | undefined {\n    const hintsPath = path.join(this.workspace.repoBaseDir, 'hints.md');\n    if (fs.existsSync(hintsPath)) {\n      return fs.readFileSync(hintsPath, 'utf-8');\n    }\n    return undefined;\n  }\n}\n\nexport class Workspace {\n  name: string;\n  repoBaseDir: string;\n  remoteRepoUrl: string;\n  status: string;\n  buildOrTestCommand?: string;\n  isGitRepo: boolean;\n  isLocked: boolean;\n  isTemp: boolean;\n  lastAccessedAt: Date;\n\nSo please list the following placeholders that can be used in the prompt:\n${context.sessionId}\n${context.requestId}\n${context.workspace.name}\n${context.workspace.repoBaseDir}\n${context.workspace.remoteRepoUrl}\n${context.workspace.buildOrTestCommand}\n${context.repositoryTree()}\n${context.repositoryHints()}",
+  "commitMessage": "Add prompt placeholders information to hints.md and README.md",
+  "stats": {
+    "inputTokens": 36521,
+    "cacheWriteTokens": 4508,
+    "cacheReadTokens": 18032,
+    "outputTokens": 1048,
+    "totalTokens": null,
+    "cost": 0.11069820000000001,
+    "currency": "gbp",
+    "processingMillis": 29774,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 31,
+      "deletions": 1,
+      "linesChanged": 31,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
