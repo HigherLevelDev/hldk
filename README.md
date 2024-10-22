@@ -290,6 +290,20 @@ The Higher Level Dev Kit supports custom plugins, allowing you to extend its fun
    - `getSystemPrompt(context)` method
    - (Optional) `getToolNames()` method
 
+This is an example agent.js:
+
+```
+   module.exports = {
+      async getSystemPrompt(context) {
+         return `You are an Echo Agent. Your task is to repeat the user's message and add the current date.
+             IMPORTANT: Format the response as JSON and only return the JSON string: {"echo": "<message> <current date>"}
+         `;
+      },
+      async getToolNames(context) {
+         return ['current_date'];
+      }
+   };
+```
 4. **Tool Implementation**:
    For each tool, create a `<tool-name>-tool.js` file. Each tool must extend the langchain Tool class.
 
