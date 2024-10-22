@@ -1,0 +1,24 @@
+{
+  "spec": "Update the readme to add a section at the bottom about how to implement a plugin",
+  "commitMessage": "Update README.md with plugin implementation guide",
+  "stats": {
+    "inputTokens": 7924,
+    "cacheWriteTokens": 4508,
+    "cacheReadTokens": 9016,
+    "outputTokens": 1001,
+    "totalTokens": null,
+    "cost": 0.0437976,
+    "currency": "gbp",
+    "processingMillis": 28288,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 92,
+      "deletions": 0,
+      "linesChanged": 92,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
