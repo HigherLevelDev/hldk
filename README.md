@@ -271,14 +271,14 @@ Here is an example from the HigherLevelDevKit itself:
 The Higher Level Dev Kit supports custom plugins, allowing you to extend its functionality. Here's how to implement a plugin:
 
 1. **Plugin Directory Structure**: 
-   Create a new directory for your plugin in `server/plugins/<pluginName>`.
+   Create a new directory for your plugin in `server/plugins/<plugin-name>`.
 
 2. **Configuration File**:
    Create a `plugin-config.json` file in your plugin directory with the following structure:
    ```json
    {
-     "name": "<pluginName>",
-     "agent": "<agent-name>-agent.js",
+     "name": "<plugin-name>",
+     "agent": "<plugin-name>-agent.js",
      "tools": {
        "<toolName>": "<tool-name>-tool.js"
      }
@@ -286,8 +286,8 @@ The Higher Level Dev Kit supports custom plugins, allowing you to extend its fun
    ```
 
 3. **Agent Implementation**:
-   If your plugin includes an agent, create an `<agent-name>-agent.js` file. The agent must implement:
-   - `getSystemPrompt()` method
+   If your plugin includes an agent, create an `<plugin-name>-agent.js` file. The agent must implement:
+   - `getSystemPrompt(context)` method
    - (Optional) `getToolNames()` method
 
 4. **Tool Implementation**:
@@ -299,11 +299,22 @@ The Higher Level Dev Kit supports custom plugins, allowing you to extend its fun
 6. **Testing**:
    After adding your plugin, you can invoke the agent with an HTTP POST request to:
    ```
-   POST http://localhost:3010/agents/<agent-name>/responseContent
+   POST http://localhost:3010/agents/<plugin-name>/responseContent
+   Accepts: application/json
+   {
+    "workspaceName":"hldk",
+    "content":"meow",
+    "config": {
+        "model":"groq/llama3-groq-70b-8192-tool-use-preview"
+    }
+   }
+   
    ```
    Set the `Accepts` header to `application/json` for JSON responses.
 
-Remember to follow the existing code style and practices when implementing your plugin. For more detailed information, refer to the plugin development documentation or examine the existing plugins in the `server/plugins/` directory.
+Examine the existing plugins in the `server/plugins/` directory.
+
+**TIP: Add this repo as a workspace and ask the se-agent to create your plugin!**
 
 ### Prompt Placeholders
 

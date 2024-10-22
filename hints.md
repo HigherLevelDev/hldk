@@ -55,7 +55,7 @@ POST http://localhost:3010/agents/<agent-name>/responseContent
 
 If they want the agent to return a JSON response then set Accepts header to application/json
 
-# Prompt Placeholders
+## Prompt Placeholders
 
 When implementing the `getSystemPrompt(context)` method in your agent, you can use the following placeholders in your prompt:
 
