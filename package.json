@@ -1,6 +1,6 @@
 {
   "name": "hldk-server",
-  "version": "0.10.3",
+  "version": "0.11.0",
   "description": "Higher Level Dev Kit",
   "author": "adam@higherleveldev",
   "private": true,
