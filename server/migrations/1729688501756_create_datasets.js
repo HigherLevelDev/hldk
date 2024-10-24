@@ -1,0 +1,1 @@
+exports.up=function(t){return t.schema.createTable("datasets",(function(e){e.string("id").primary(),e.string("name").notNullable(),e.string("baseDir").notNullable(),e.timestamp("createdAt").notNullable().defaultTo(t.fn.now())}))},exports.down=function(t){return t.schema.dropTable("datasets")};
