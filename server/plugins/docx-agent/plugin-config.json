@@ -1,7 +1,0 @@
-{
-    "name": "docx-agent",
-    "agent": "docx-agent.js",
-    "tools": {
-        "read_docx_text": "read-docx-text-tool.js"
-    }
-}

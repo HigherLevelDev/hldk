@@ -1,0 +1,1 @@
+exports.up=function(n){return n.schema.alterTable("form_answers",(function(n){n.string("normalizedQuestionText")}))},exports.down=function(n){return n.schema.alterTable("form_answers",(function(n){n.dropColumn("normalizedQuestionText")}))};

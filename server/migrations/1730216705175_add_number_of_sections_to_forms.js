@@ -1,0 +1,1 @@
+exports.up=function(e){return e.schema.alterTable("forms",(function(e){e.integer("numberOfSections").defaultTo(0)}))},exports.down=function(e){return e.schema.alterTable("forms",(function(e){e.dropColumn("numberOfSections")}))};

@@ -1,7 +1,9 @@
 {
   "name": "echo-agent",
-  "agent": "echo-agent.js",
+  "agents": {
+    "echo-agent": "echo-agent.js"
+  },
   "tools": {
-    "current_date":"current-date-tool.js"
+    "current_date": "current-date-tool.js"
   }
 }

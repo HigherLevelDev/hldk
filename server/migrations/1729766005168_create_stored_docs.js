@@ -1,0 +1,1 @@
+exports.up=function(e){return e.schema.createTable("stored_docs",(function(e){e.string("id").primary(),e.text("contents").notNullable(),e.string("mimeType").notNullable(),e.datetime("createdAt").notNullable(),e.string("sessionId"),e.string("workspaceName")}))},exports.down=function(e){return e.schema.dropTable("stored_docs")};
