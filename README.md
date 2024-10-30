@@ -345,6 +345,16 @@ When implementing the `getSystemPrompt(context)` method in your agent, you can u
 
 These placeholders will be automatically replaced with their corresponding values when the prompt is generated. Use them to provide context-specific information to your agent.
 
+## Form Assistant
+
+This is a proof of concept app for getting assistance when needing to fill in large complex (MS Word based) Form.
+
+Requires the Chromadb Docker container running:
+```
+   cd docker
+   docker compose up -d hldk
+```
+
 ## Contact
 
 If you have any questions then please email adam@higherleveldev.com or [join the Slack here](https://join.slack.com/t/higherleveldevgroup/shared_invite/zt-2qsik2mti-Y8y_VjO2GFvVqBI_H~JeEA).
