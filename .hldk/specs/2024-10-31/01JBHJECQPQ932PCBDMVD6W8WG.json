@@ -1,0 +1,24 @@
+{
+  "spec": "update the form assistant part of the readme to reflect this way to start the app",
+  "commitMessage": "Update Form Assistant section in README to reflect new startup methods",
+  "stats": {
+    "inputTokens": 20161,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 16182,
+    "outputTokens": 447,
+    "totalTokens": null,
+    "cost": 0.054031949999999995,
+    "currency": "gbp",
+    "processingMillis": 12766,
+    "git": {
+      "filesChanged": 2,
+      "insertions": 13,
+      "deletions": 4,
+      "linesChanged": 13,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

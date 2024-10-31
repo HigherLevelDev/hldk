@@ -349,10 +349,19 @@ These placeholders will be automatically replaced with their corresponding value
 
 This is a proof of concept app for getting assistance when needing to fill in large complex (MS Word based) Form.
 
-Requires the Chromadb Docker container running:
+You can start both ChromaDB and HLDK with a single command:
+```bash
+./chromaAndHldk.sh
 ```
-   cd docker
-   docker compose up -d hldk
+
+Alternatively, if you just want to run ChromaDB (for example, if you're developing and want to restart HLDK separately):
+```bash
+./docker/chromaOnlyUp.sh -d
+```
+
+And then in another terminal:
+```bash
+./hldk.sh
 ```
 
 ## Contact

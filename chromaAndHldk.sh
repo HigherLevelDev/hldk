@@ -12,7 +12,7 @@ echo "Starting ChromaDB in detached mode..."
 
 # Wait a moment for ChromaDB to initialize
 echo "Waiting for ChromaDB to initialize..."
-sleep 5
+sleep 2
 
 # Start HLDK
 echo "Starting HLDK..."
