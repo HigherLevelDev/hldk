@@ -1,6 +1,19 @@
 version: '3.8'
 
 services:
+  hldk:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "3010:3010"
+    volumes:
+      - hldk_data:/app/data
+    env_file:
+      - ../.env
+    depends_on:
+      - chroma
+
   chroma:
     image: chromadb/chroma:latest
     environment:
@@ -12,5 +25,7 @@ services:
       - chroma_data:/chroma/chroma
 
 volumes:
-  hldk_chroma_data:
+  hldk_data:
+    driver: local
+  chroma_data:
     driver: local
