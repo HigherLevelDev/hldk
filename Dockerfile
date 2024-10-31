@@ -17,9 +17,6 @@ RUN pnpm install
 # Copy the rest of the application
 COPY . .
 
-# Create volume mount points
-VOLUME ["/app/data"]
-
 # Expose the port the app runs on
 EXPOSE 3010
 

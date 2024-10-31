@@ -6,8 +6,7 @@ services:
     ports:
       - "3010:3010"
     volumes:
-      - hldk_data:/app/data
-      - hldk_db:/root/.hldk/db
+      - hldk_data:/root/.hldk
     environment:
       - CHROMA_URL=http://chroma:8000
     env_file:
@@ -29,6 +28,4 @@ volumes:
   hldk_data:
     driver: local
   chroma_data:
-    driver: local
-  hldk_db:
     driver: local
