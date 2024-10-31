@@ -349,6 +349,10 @@ These placeholders will be automatically replaced with their corresponding value
 
 This is a proof of concept app for getting assistance when needing to fill in large complex (MS Word based) Form.
 
+It uses the Reasoning Model (Defaults to gpt-4o) to ingest the word doc and the RAG Query Model (Defaults to gpt-40) to run the RAG Queries. You can update the RAG Query model to use a groq or Ollama open source model.
+
+It relies on having a locally running ChromaDB on http://localhost:8000 (or you can set the CHROMA_URL in .env)
+
 You can start both ChromaDB and HLDK with a single command:
 ```bash
 ./chromaAndHldk.sh
