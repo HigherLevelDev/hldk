@@ -1,0 +1,24 @@
+{
+  "spec": "i need the data in the hldk container and the chroma db to persist between down and the next up - currently we are losing the data stored in the sqlite3 db in /root/.hldk/db",
+  "commitMessage": "Add persistent volume for SQLite database in Docker configuration",
+  "stats": {
+    "inputTokens": 2312,
+    "cacheWriteTokens": 5394,
+    "cacheReadTokens": 16182,
+    "outputTokens": 581,
+    "totalTokens": null,
+    "cost": 0.030549825000000003,
+    "currency": "gbp",
+    "processingMillis": 12229,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 3,
+      "deletions": 0,
+      "linesChanged": 3,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
