@@ -1,0 +1,24 @@
+{
+  "spec": "add a chromaOnlyUp.sh",
+  "commitMessage": "Add chromaOnlyUp.sh script for starting standalone ChromaDB",
+  "stats": {
+    "inputTokens": 7204,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 21576,
+    "outputTokens": 807,
+    "totalTokens": null,
+    "cost": 0.030142350000000002,
+    "currency": "gbp",
+    "processingMillis": 16201,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 50,
+      "deletions": 0,
+      "linesChanged": 50,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
