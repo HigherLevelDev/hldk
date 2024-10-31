@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Parse command line arguments
+FOLLOW_LOGS=false
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -f|--follow) FOLLOW_LOGS=true; shift ;;
+        *) echo "Unknown parameter: $1"; exit 1 ;;
+    esac
+done
+
 # Function to handle errors
 handle_error() {
     echo "Error: $1" >&2
@@ -28,25 +37,31 @@ fi
 
 # Build and start the containers
 echo "Building and starting Docker containers..."
-docker compose up --build -d
-
-# Wait for services to be ready
-echo "Waiting for services to start..."
-sleep 5
-
-# Check if the services are running
-if docker compose ps | grep -q "hldk.*"; then
-    echo "HLDK service is running"
+if [ "$FOLLOW_LOGS" = true ]; then
+    # Start in foreground with logs if follow flag is set
+    docker compose up --build
 else
-    handle_error "HLDK service failed to start"
-fi
+    # Start in detached mode
+    docker compose up --build -d
 
-if docker compose ps | grep -q "chroma.*"; then
-    echo "Chroma service is running"
-else
-    handle_error "Chroma service failed to start"
-fi
+    # Wait for services to be ready
+    echo "Waiting for services to start..."
+    sleep 5
 
-echo "All services are up and running!"
-echo "HLDK is available at http://localhost:3010"
-echo "Chroma is available at http://localhost:8000"
+    # Check if the services are running
+    if docker compose ps | grep -q "hldk.*"; then
+        echo "HLDK service is running"
+    else
+        handle_error "HLDK service failed to start"
+    fi
+
+    if docker compose ps | grep -q "chroma.*"; then
+        echo "Chroma service is running"
+    else
+        handle_error "Chroma service failed to start"
+    fi
+
+    echo "All services are up and running!"
+    echo "HLDK is available at http://localhost:3010"
+    echo "Chroma is available at http://localhost:8000"
+fi

@@ -1,0 +1,24 @@
+{
+  "spec": "update up.sh script to allow optional --follow or -f argument that causes the script to follow the docker container logs for the hldk service",
+  "commitMessage": "Added --follow/-f flag to up.sh to optionally follow docker container logs",
+  "stats": {
+    "inputTokens": 3272,
+    "cacheWriteTokens": 5394,
+    "cacheReadTokens": 16182,
+    "outputTokens": 947,
+    "totalTokens": null,
+    "cost": 0.036827325,
+    "currency": "gbp",
+    "processingMillis": 17113,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 33,
+      "deletions": 18,
+      "linesChanged": 33,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
