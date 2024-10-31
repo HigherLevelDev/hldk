@@ -1,0 +1,24 @@
+{
+  "spec": "(base) adam ~/dev/higherleveldev/hldk [main] $ ./chromaAndHldk.sh \nStarting ChromaDB in detached mode...\nStarting ChromaDB container...\nstat /Users/adam/dev/higherleveldev/hldk/docker-compose-chromadb-only.yml: no such file or directory\nWaiting for service to start...\nstat /Users/adam/dev/higherleveldev/hldk/docker-compose-chromadb-only.yml: no such file or directory\nError: ChromaDB service failed to start\nError: Failed to start ChromaDB\n(base) adam ~/dev/higherleveldev/hldk [main] $ \n",
+  "commitMessage": "Fix ChromaDB startup script to use correct path for docker-compose file\n\n- Updated docker/chromaOnlyUp.sh to use the correct path for docker-compose-chromadb-only.yml\n- Added $(dirname \"$0\") to ensure the script finds the compose file in the docker directory",
+  "stats": {
+    "inputTokens": 7056,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 32610,
+    "outputTokens": 928,
+    "totalTokens": null,
+    "cost": 0.03365325,
+    "currency": "gbp",
+    "processingMillis": 18860,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 3,
+      "deletions": 3,
+      "linesChanged": 3,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
