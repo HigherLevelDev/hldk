@@ -1,0 +1,24 @@
+{
+  "spec": "docker-compose is old hat... compose is included in docker now and should be run via \"docker compose <args>\" instead of \"docker-compose <args>\"",
+  "commitMessage": "Update dockerUp.sh to use modern docker compose command\n\n- Replaced legacy docker-compose commands with modern docker compose\n- Updated compose availability check to verify docker compose V2\n- Removed unnecessary docker-compose binary check",
+  "stats": {
+    "inputTokens": 8678,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 10728,
+    "outputTokens": 1052,
+    "totalTokens": null,
+    "cost": 0.0337743,
+    "currency": "gbp",
+    "processingMillis": 19509,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 6,
+      "deletions": 6,
+      "linesChanged": 6,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
