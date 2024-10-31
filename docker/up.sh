@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Parse command line arguments
-FOLLOW_LOGS=false
+DETACH=false
 while [[ "$#" -gt 0 ]]; do
     case $1 in
-        -f|--follow) FOLLOW_LOGS=true; shift ;;
+        -d|--detach) DETACH=true; shift ;;
         *) echo "Unknown parameter: $1"; exit 1 ;;
     esac
 done
@@ -37,11 +37,8 @@ fi
 
 # Build and start the containers
 echo "Building and starting Docker containers..."
-if [ "$FOLLOW_LOGS" = true ]; then
-    # Start in foreground with logs if follow flag is set
-    docker compose up --build
-else
-    # Start in detached mode
+if [ "$DETACH" = true ]; then
+    # Start in detached mode if detach flag is set
     docker compose up --build -d
 
     # Wait for services to be ready
@@ -64,4 +61,7 @@ else
     echo "All services are up and running!"
     echo "HLDK is available at http://localhost:3010"
     echo "Chroma is available at http://localhost:8000"
+else
+    # Start in foreground with logs (default behavior)
+    docker compose up --build
 fi

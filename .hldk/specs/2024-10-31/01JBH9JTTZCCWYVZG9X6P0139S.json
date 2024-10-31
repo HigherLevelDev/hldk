@@ -1,0 +1,24 @@
+{
+  "spec": "reverse this and use -d as the option to detatch ( so foreground operation is the default)",
+  "commitMessage": "Changed up.sh to run in foreground by default, added -d/--detach flag for detached mode",
+  "stats": {
+    "inputTokens": 6622,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 16182,
+    "outputTokens": 946,
+    "totalTokens": null,
+    "cost": 0.02918295,
+    "currency": "gbp",
+    "processingMillis": 17733,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 7,
+      "deletions": 7,
+      "linesChanged": 7,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
