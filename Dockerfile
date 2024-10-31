@@ -1,4 +1,6 @@
-FROM node:20-slim
+FROM node:20
+
+RUN apt-get update && apt-get install -y procps
 
 # Install pnpm
 RUN npm install -g pnpm

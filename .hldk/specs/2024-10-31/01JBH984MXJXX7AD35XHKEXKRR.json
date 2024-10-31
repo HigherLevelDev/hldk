@@ -1,0 +1,24 @@
+{
+  "spec": "add a down.sh to the docker dir and update the up.sh script to work in the new location (moved from root to docker dir)",
+  "commitMessage": "Added down.sh script and updated up.sh to work from docker directory\n\n- Created new down.sh script to stop and remove Docker containers\n- Updated up.sh to handle .env file path correctly from docker directory\n- Made down.sh executable",
+  "stats": {
+    "inputTokens": 5562,
+    "cacheWriteTokens": 5385,
+    "cacheReadTokens": 21540,
+    "outputTokens": 1220,
+    "totalTokens": null,
+    "cost": 0.0462313125,
+    "currency": "gbp",
+    "processingMillis": 22760,
+    "git": {
+      "filesChanged": 5,
+      "insertions": 34,
+      "deletions": 10,
+      "linesChanged": 34,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
