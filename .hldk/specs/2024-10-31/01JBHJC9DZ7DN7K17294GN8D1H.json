@@ -1,0 +1,24 @@
+{
+  "spec": "add a chromaAndHldk.sh script to the root which runs chromaUp with the -d switch and then runs the hldk script to start hldk",
+  "commitMessage": "Add chromaAndHldk.sh script to start both ChromaDB and HLDK",
+  "stats": {
+    "inputTokens": 12818,
+    "cacheWriteTokens": 0,
+    "cacheReadTokens": 21576,
+    "outputTokens": 499,
+    "totalTokens": null,
+    "cost": 0.03930885,
+    "currency": "gbp",
+    "processingMillis": 13383,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 19,
+      "deletions": 0,
+      "linesChanged": 19,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
