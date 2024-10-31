@@ -1,0 +1,24 @@
+{
+  "spec": "need to set the CHROMA_URL env variable in the hldk container in the docker compose.. currently it is defaulting to localhost:8000 inside the container and that's not working",
+  "commitMessage": "Set CHROMA_URL environment variable in Docker Compose to point to chroma service",
+  "stats": {
+    "inputTokens": 1440,
+    "cacheWriteTokens": 5394,
+    "cacheReadTokens": 10788,
+    "outputTokens": 496,
+    "totalTokens": null,
+    "cost": 0.026417925000000002,
+    "currency": "gbp",
+    "processingMillis": 9889,
+    "git": {
+      "filesChanged": 1,
+      "insertions": 2,
+      "deletions": 0,
+      "linesChanged": 2,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}
