@@ -1,0 +1,24 @@
+{
+  "spec": "add another docker compose file called docker-compose-chromadb-only.yaml which just starts chromadb with the same settings",
+  "commitMessage": "Add docker-compose-chromadb-only.yml for running ChromaDB standalone",
+  "stats": {
+    "inputTokens": 1357,
+    "cacheWriteTokens": 5394,
+    "cacheReadTokens": 10788,
+    "outputTokens": 406,
+    "totalTokens": null,
+    "cost": 0.025218675000000003,
+    "currency": "gbp",
+    "processingMillis": 8655,
+    "git": {
+      "filesChanged": 3,
+      "insertions": 16,
+      "deletions": 2,
+      "linesChanged": 16,
+      "testFilesChanged": 0,
+      "testInsertions": 0,
+      "testDeletions": 0,
+      "testLinesChanged": 0
+    }
+  }
+}

@@ -1,0 +1,14 @@
+services:
+  chroma:
+    image: chromadb/chroma:latest
+    environment:
+      - ALLOW_RESET=true
+      - ANONYMIZED_TELEMETRY=false
+    ports:
+      - 8000:8000
+    volumes:
+      - chroma_data:/chroma/chroma
+
+volumes:
+  chroma_data:
+    driver: local
