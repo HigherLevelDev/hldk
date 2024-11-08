@@ -1,0 +1,1 @@
+exports.up=function(n){return n.schema.table("form_answers",(function(n){n.string("originalInputXpath").nullable()}))},exports.down=function(n){return n.schema.table("form_answers",(function(n){n.dropColumn("originalInputXpath")}))};

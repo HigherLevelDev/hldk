@@ -1,0 +1,1 @@
+exports.up=function(e){return e.schema.alterTable("forms",(e=>{e.integer("questionCount").defaultTo(0)})).alterTable("form_sections",(e=>{e.integer("questionCount").defaultTo(0)}))},exports.down=function(e){return e.schema.alterTable("forms",(e=>{e.dropColumn("questionCount")})).alterTable("form_sections",(e=>{e.dropColumn("questionCount")}))};
