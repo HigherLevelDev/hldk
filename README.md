@@ -67,7 +67,9 @@ You will need to add a debit or credit card and purchase some credits.
 A developer working flat out most days is going to rack up something like £100 worth of tokens per month.
 YMMV based on repo size etc. You can set limits in the Anthropic Console to protect yourself. 
 I suggest you have your own Anthropic account and either expense it or use a company debit/credit card.
-If you try to share an API key among developers then you may well run into per month usage limits or rate limits. 
+If you try to share an API key among developers then you may well run into per month usage limits or rate limits.
+You may get rate limited to begin with as you start on Tier 1 and are only allowed 1 million tokens per day. Add a bunch
+of credit to get to higher tiers.
 
 ### Install Required Tools
 
