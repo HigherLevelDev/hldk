@@ -353,6 +353,8 @@ This is a proof of concept app for getting assistance when needing to fill in la
 
 It uses the Reasoning Model (Defaults to gpt-4o) to ingest the word doc and the RAG Query Model (Defaults to gpt-40) to run the RAG Queries. You can update the RAG Query model to use a groq or Ollama open source model.
 
+### ChromaDB required
+
 It relies on having a locally running ChromaDB on http://localhost:8000 (or you can set the CHROMA_URL in .env)
 
 You can start both ChromaDB and HLDK with a single command:
@@ -369,6 +371,16 @@ And then in another terminal:
 ```bash
 ./hldk.sh
 ```
+
+### Special Mode
+
+If you add a .env file to your root and then add:
+
+```dotenv
+MODE=FORM_ASSISTANT_ONLY
+```
+   
+Then the UI will hide all the non form assistant bits and change the title to: FormFilla.ai
 
 ## Contact
 
