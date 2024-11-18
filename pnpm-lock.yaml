@@ -13,7 +13,7 @@ importers:
         version: 0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13)
       '@langchain/community':
         specifier: ^0.3.12
-        version: 0.3.12(@ibm-cloud/watsonx-ai@1.1.1)(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(@xenova/transformers@2.17.2)(axios@1.7.7)(chromadb@1.9.2(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(d3-dsv@3.0.1)(encoding@0.1.13)(ibm-cloud-sdk-core@5.1.0)(ignore@6.0.2)(jsdom@25.0.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mammoth@1.8.0)(officeparser@5.0.0)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))(pdf-parse@1.1.1)(puppeteer@23.7.1)(ws@8.18.0)
+        version: 0.3.12(@ibm-cloud/watsonx-ai@1.1.1)(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/mistralai@0.1.1(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(@xenova/transformers@2.17.2)(axios@1.7.7)(chromadb@1.9.2(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(d3-dsv@3.0.1)(encoding@0.1.13)(ibm-cloud-sdk-core@5.1.0)(ignore@6.0.2)(jsdom@25.0.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mammoth@1.8.0)(officeparser@5.0.0)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))(pdf-parse@1.1.1)(puppeteer@23.7.1)(ws@8.18.0)
       '@langchain/core':
         specifier: ^0.3.17
         version: 0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
@@ -23,6 +23,9 @@ importers:
       '@langchain/langgraph':
         specifier: ^0.2.20
         version: 0.2.20(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))
+      '@langchain/mistralai':
+        specifier: ^0.1.1
+        version: 0.1.1(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13)
       '@langchain/ollama':
         specifier: ^0.1.2
         version: 0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))
@@ -118,7 +121,7 @@ importers:
         version: 3.1.0(sqlite3@5.1.7)
       langchain:
         specifier: ^0.3.5
-        version: 0.3.5(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(axios@1.7.7)(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
+        version: 0.3.5(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/mistralai@0.1.1(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(axios@1.7.7)(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
       logform:
         specifier: ^2.7.0
         version: 2.7.0
@@ -631,6 +634,12 @@ packages:
     peerDependencies:
       '@langchain/core': '>=0.2.36 <0.3.0 || >=0.3.9 < 0.4.0'
 
+  '@langchain/mistralai@0.1.1':
+    resolution: {integrity: sha512-gnHdQRfn+iBReKD0u1nydGqHgVOjnKHpd0Q2qEN61ZuxiqFOOauWYkrbyml7tzcOdMv2vUAr5+pjpXip+ez59w==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@langchain/core': '>=0.2.21 <0.4.0'
+
   '@langchain/ollama@0.1.2':
     resolution: {integrity: sha512-WCeogCFjdWf6jGwLt12cxkSpm5eVamv43b48DIlbJ4np9vChwVlZZB6FU7uEXNrJ9c0dsoa6877hJ5mYHdbJvw==}
     engines: {node: '>=18'}
@@ -650,6 +659,9 @@ packages:
   '@lukeed/csprng@1.1.0':
     resolution: {integrity: sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==}
     engines: {node: '>=8'}
+
+  '@mistralai/mistralai@0.4.0':
+    resolution: {integrity: sha512-KmFzNro1RKxIFh19J3osmUQhucefBBauMXN5fa9doG6dT9OHR/moBvvn+riVlR7c0AVfuxO8Dfa03AyLYYzbyg==}
 
   '@nestjs/common@10.4.7':
     resolution: {integrity: sha512-gIOpjD3Mx8gfYGxYm/RHPcJzqdknNNFCyY+AxzBT3gc5Xvvik1Dn5OxaMGw5EbVfhZgJKVP0n83giUOAlZQe7w==}
@@ -3040,7 +3052,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@langchain/community@0.3.12(@ibm-cloud/watsonx-ai@1.1.1)(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(@xenova/transformers@2.17.2)(axios@1.7.7)(chromadb@1.9.2(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(d3-dsv@3.0.1)(encoding@0.1.13)(ibm-cloud-sdk-core@5.1.0)(ignore@6.0.2)(jsdom@25.0.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mammoth@1.8.0)(officeparser@5.0.0)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))(pdf-parse@1.1.1)(puppeteer@23.7.1)(ws@8.18.0)':
+  '@langchain/community@0.3.12(@ibm-cloud/watsonx-ai@1.1.1)(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/mistralai@0.1.1(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(@xenova/transformers@2.17.2)(axios@1.7.7)(chromadb@1.9.2(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(d3-dsv@3.0.1)(encoding@0.1.13)(ibm-cloud-sdk-core@5.1.0)(ignore@6.0.2)(jsdom@25.0.1)(jsonwebtoken@9.0.2)(lodash@4.17.21)(mammoth@1.8.0)(officeparser@5.0.0)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))(pdf-parse@1.1.1)(puppeteer@23.7.1)(ws@8.18.0)':
     dependencies:
       '@ibm-cloud/watsonx-ai': 1.1.1
       '@langchain/core': 0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
@@ -3050,7 +3062,7 @@ snapshots:
       flat: 5.0.2
       ibm-cloud-sdk-core: 5.1.0
       js-yaml: 4.1.0
-      langchain: 0.3.5(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(axios@1.7.7)(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
+      langchain: 0.3.5(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/mistralai@0.1.1(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(axios@1.7.7)(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
       langsmith: 0.2.5(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
       uuid: 10.0.0
       zod: 3.23.8
@@ -3145,6 +3157,16 @@ snapshots:
       uuid: 10.0.0
       zod: 3.23.8
 
+  '@langchain/mistralai@0.1.1(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13)':
+    dependencies:
+      '@langchain/core': 0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
+      '@mistralai/mistralai': 0.4.0(encoding@0.1.13)
+      uuid: 10.0.0
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.3(zod@3.23.8)
+    transitivePeerDependencies:
+      - encoding
+
   '@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))':
     dependencies:
       '@langchain/core': 0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
@@ -3169,6 +3191,12 @@ snapshots:
       - openai
 
   '@lukeed/csprng@1.1.0': {}
+
+  '@mistralai/mistralai@0.4.0(encoding@0.1.13)':
+    dependencies:
+      node-fetch: 2.7.0(encoding@0.1.13)
+    transitivePeerDependencies:
+      - encoding
 
   '@nestjs/common@10.4.7(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1)':
     dependencies:
@@ -4492,7 +4520,7 @@ snapshots:
 
   kuler@2.0.0: {}
 
-  langchain@0.3.5(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(axios@1.7.7)(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)):
+  langchain@0.3.5(@langchain/anthropic@0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(@langchain/groq@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/mistralai@0.1.1(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13))(@langchain/ollama@0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))))(axios@1.7.7)(encoding@0.1.13)(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)):
     dependencies:
       '@langchain/core': 0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8))
       '@langchain/openai': 0.3.12(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13)
@@ -4510,6 +4538,7 @@ snapshots:
     optionalDependencies:
       '@langchain/anthropic': 0.3.7(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13)
       '@langchain/groq': 0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13)
+      '@langchain/mistralai': 0.1.1(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))(encoding@0.1.13)
       '@langchain/ollama': 0.1.2(@langchain/core@0.3.17(openai@4.71.1(encoding@0.1.13)(zod@3.23.8)))
       axios: 1.7.7
     transitivePeerDependencies:
