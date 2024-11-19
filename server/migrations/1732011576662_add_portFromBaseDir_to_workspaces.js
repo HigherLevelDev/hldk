@@ -1,0 +1,1 @@
+exports.up=function(r){return r.schema.table("workspaces",(function(r){r.string("portFromBaseDir")}))},exports.down=function(r){return r.schema.table("workspaces",(function(r){r.dropColumn("portFromBaseDir")}))};
