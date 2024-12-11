@@ -15,6 +15,7 @@ Key Features:
 * Node-based server and easy to use web UI
 * Supports Anthropic Claude Sonnet 3.5 (and also OpenAI & Ollama)
 * Works with existing code bases or a clean slate
+* Multiple Agents to help with various disciplines (e.g. Product, Architect, Software Engineer)
 * Audio transcription support (talk instead of type)
 * Workspace management for multiple projects
 * Git integration for version control
@@ -32,10 +33,12 @@ https://github.com/user-attachments/assets/8ec11e01-b513-4acc-9e06-319a2772472e
 3. (Optional) Set up audio transcription
 4. Run the HLDK server with ./hldk.sh
 5. Access the web UI in your browser at http://localhost:3010
-6. Get your free API Key from here: https://higherlevel.dev/app
-7. Get a Claude API Key from https://console.anthropic.com and enter it into the config page
+6. Go to the Settings page (bottom link on left hand menu) and enter the required API keys:
+6. Get your free HLDK API Key from here: https://higherlevel.dev/app
+7. Get a Claude API Key from https://console.anthropic.com
+8. Get you Groq API Key from https://console.groq.com (this is needed for cheap summarization)
 8. Import your local git repo as a workspace 
-9. Chat with the SE Agent to make updates to your system
+9. Chat with the Agents to make updates to your system
 
 For detailed instructions, see the sections below.
 
@@ -165,10 +168,50 @@ Just hit **Edit** with the workspace selected and enter the command. Note that t
 and if it doesn't then a simple "test" prompt should suffice. The Agent should iterate and keep trying to fix stuff
 until the tests pass.
 
+## Product Agent
+
+<img alt="Higher Level Dev Kit" src="assets/hldk-epics.png" width="800px"/>
+
+The Product Agent will help you refine your requirements and turn them into an Epic with child stories.
+We support a simplified "in-repo" mechanism for this currently by storing markdown and json files inside the ./epics directory inside the git Repo
+
+You can ask the Product Agent things like:
+
+* "Create a new Epic from the following requirements..."
+* "Refine the requirements for Epic 1 to add..."
+* "Create the stories for Epic 2"
+* "Update the stories for Epic 1 to reflect the updated requirements and the new design of...."
+
+## Architect Agent
+
+<img alt="Higher Level Dev Kit" src="assets/hldk-architect-tasks.png" width="800px"/>
+
+The Architect Agent will interrogate the existing codebase and will break down each Story (under REPO/epics) into a set of coding tasks for the Software Engineering Agent to implement.
+
+You can ask the Architect Agent things like:
+
+* "Create the tasks for Epic 3, story 1"
+* "Update the tasks for Epic 3, story 1 to make the following changes..."
+
 ## Software Engineering Agent
 
+<img alt="Higher Level Dev Kit" src="assets/hldk-se-agent.png" width="800px"/>
 
-<img alt="Higher Level Dev Kit" src="assets/se-agent.png" width="800px"/>
+The Software Engineering Agent is primarily there to turn your ideas into new code.
+It has access to the full source in the repo and will make any changes you request by
+first examining related files and then implementing a solution by adding new files and/or updating existing files.
+You can also set the portFromDir on the workspace to allow the SE Agent to read source files from another repository - this is useful when porting code from one system over to another.
+
+The agent can see all the files in the git repo but it may need hints as to where to look for things.
+
+You can ask the SE Agent things like:
+
+* _"Update the session page in the web ui to do x, y, z..."_
+* _"Look at mutation service and repo and make changes to do x,y,z..."_
+* _"Use the person module as an example and implement a new module called Foo with props (x,y,z) - implement the repo, service, controller with unit tests for all"_
+* "Have a look at the payments module (entities, service etc) and add a new service that does...."
+* "Add a new e2e test that verifies that the Foo module is working correcly.. be sure to cover the following functionality..."
+* "Implement task 1 in story 2 of epic 1"
 
 ### Sessions
 Create a new session for each new mini-spec that you want to send to the agent. 
@@ -177,19 +220,13 @@ definitely get confused!
 
 If you want to make tweaks to the code that was just generated then that is usually fine to do in the same session.
 
-### Chatting with the agent
+### Chatting with the agents
 
 Send specs or commands by filling out the text area at the bottom that says _"Type your message"_ and then clicking the Send or simply hitting **Enter**.
 
 If you want a new line you can use **Shift+Enter**
 
-The agent can see all the files in the git repo but it may need hints as to where to look for things.
-
-You can say things like: 
-
-* _"Update the session page in the web ui to do x, y, z..."_
-* _"Look at mutation service and repo and make changes to do x,y,z..."_
-* _"Use the person module as an example and implement a new module called Foo with props (x,y,z) - implement the repo, service, controller with unit tests for all"_
+You can upload images and send them up to the Agent (if the LLM supports multimodal) using the image button.
 
 ### Voice Transcription
 
@@ -203,6 +240,15 @@ will appear in the text area. You will then still need to submit this text by pr
 ### Aborting
 
 If the agent seems to be going awry then you can interrupt what it is doing by hitting the red stop button.
+
+### Epics
+
+<img alt="Higher Level Dev Kit" src="assets/hldk-epics-view.png" width="600px"/>
+
+On the right hand side of the agent screens you can select "Epics" to see the Epics related to the current workspace.
+This is currently a simplified Jira-like thing that stores Epic (requirements.md), Stories and Tasks under the ./epics 
+directory inside the git repo. This means that the agents can both read and write to the files and the history is managed
+by git. The Epics view is a read-only view into this state and you can select the relevant Epic & Story using the dropdowns.
 
 ### Updates
 
