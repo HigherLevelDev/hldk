@@ -158,9 +158,11 @@ from the left hand menu and then **Import Local Repo** where you will be asked f
 to be the name of the workspace unless you choose to override by providing a specific name for your repo.
 
 ### Default Workspace
-The first Workspace that you set up will be your default workspace and will appear at the top of the drop down on the SE Agent page.
-If you want to select a different workspace as your default then you can do that from the Workspaces page by selecting the workspace
-in the table and hitting **Set as Default**
+Once you have a bunch of workspaces you might find it annoying to have to keep selecting the one you want for a particular Agent.
+You can select the workspace you want for the agent in the dropdown and then by clicking on the star icon to the right of the dropdown
+you can make that workspace the default which will be pre-selected for the current agent.
+
+<img alt="Higher Level Dev Kit" src="assets/hldk-default-workspace.png" width="600"/>
 
 ### Build/Test Command
 You can set a command or script for the SE Agent to run after it makes its code changes but before committing them to git. 
