@@ -36,9 +36,10 @@ https://github.com/user-attachments/assets/8ec11e01-b513-4acc-9e06-319a2772472e
 6. Go to the Settings page (bottom link on left hand menu) and enter the required API keys:
 6. Get your free HLDK API Key from here: https://higherlevel.dev/app
 7. Get a Claude API Key from https://console.anthropic.com
-8. Get you Groq API Key from https://console.groq.com (this is needed for cheap summarization)
-8. Import your local git repo as a workspace 
-9. Chat with the Agents to make updates to your system
+8. Get your Groq API Key from https://console.groq.com (this is needed for cheap summarization)
+9. Get your GLHF API Key from https://glhf.chat (free access to open source models such as Llama3.3)
+10. Import your local git repo as a workspace 
+11. Chat with the Agents to make updates to your system
 
 For detailed instructions, see the sections below.
 
