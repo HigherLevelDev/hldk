@@ -9,17 +9,22 @@
 
 ## Summary of the Dev Kit
 
-The Higher Level Dev Kit (HLDK) is a powerful tool that allows you to develop software at a higher level using natural language. It offloads the actual coding to an LLM-powered Software Engineering Agent.
+The Higher Level Dev Kit (HLDK) is a powerful tool that allows you to develop software at a higher level using natural language.
 
 Key Features:
 * Node-based server and easy to use web UI
-* Supports Anthropic Claude Sonnet 3.5 (and also OpenAI & Ollama)
+* Supports Anthropic Claude Sonnet 3.5 (and also OpenAI, Groq, GLHF, Mistral & Ollama - for local LLMs)
 * Works with existing code bases or a clean slate
-* Multiple Agents to help with various disciplines (e.g. Product, Architect, Software Engineer)
+* Multiple Agents to help with various disciplines
+* Product Agent to help define requirements and create stories
+* Architect Agent to create refactoring plans and break down stories into coding tasks
+* Software Engineering Agent to make code changes, run tests and iterate until passing
+* Ops Agent to install tools and bootstrap new projects
+* Private Coder is a simplified coding agent tuned to work with the best open source models
 * Audio transcription support (talk instead of type)
 * Workspace management for multiple projects
 * Git integration for version control
-* Automatically runs and fixes tests
+* Simplified "In-Repo" Epics/Stories/Task project management
 
 
 ## HLDK in Action
