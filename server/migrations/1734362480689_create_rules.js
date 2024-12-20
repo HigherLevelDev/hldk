@@ -1,0 +1,1 @@
+exports.up=function(t){return t.schema.createTable("rules",(function(e){e.string("agentName").primary(),e.text("content").notNullable(),e.timestamp("createdAt").defaultTo(t.fn.now()),e.timestamp("updatedAt").defaultTo(t.fn.now())}))},exports.down=function(t){return t.schema.dropTable("rules")};
