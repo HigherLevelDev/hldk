@@ -401,6 +401,42 @@ When implementing the `getSystemPrompt(context)` method in your agent, you can u
 
 These placeholders will be automatically replaced with their corresponding values when the prompt is generated. Use them to provide context-specific information to your agent.
 
+## Troubleshooting
+
+### SQLite Bindings issue
+
+If you see an error on startup like
+
+   ```
+[Nest] 57118  - 07/02/2025, 16:02:45     LOG [NestFactory] Starting Nest application...
+02/07/2025, 16:02:45 PM - INFO: Creating new AppDataSource instance...
+02/07/2025, 16:02:45 PM - INFO: Initializing knex with config:
+Knex: run
+$ npm install sqlite3 --save
+Could not locate the bindings file. Tried:
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/build/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/build/Debug/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/build/Release/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/out/Debug/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/Debug/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/out/Release/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/Release/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/build/default/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/compiled/22.13.1/darwin/arm64/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/addon-build/release/install-root/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/addon-build/debug/install-root/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/addon-build/default/install-root/node_sqlite3.node
+ → /Users/aderiz/Code/hldk/node_modules/.pnpm/sqlite3@5.1.7/node_modules/sqlite3/lib/binding/node-v127-darwin-arm64/node_sqlite3.node
+   ```
+
+Then you might need to rebuild the sqlite module with something like:
+
+```declarative
+   cd node_modules/sqlite3
+   node-gyp rebuild
+```
+
+
 ## Form Assistant
 
 This is a proof of concept app for getting assistance when needing to fill in large complex (MS Word based) Form.
