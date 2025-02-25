@@ -9,13 +9,13 @@
       }
     }
   },
-  "version": "0.21.2",
+  "version": "0.22.0",
   "description": "Higher Level Dev Kit",
   "author": "adam@higherleveldev",
   "private": true,
   "license": "custom",
   "dependencies": {
-    "@langchain/anthropic": "^0.3.7",
+    "@langchain/anthropic": "^0.3.14",
     "@langchain/community": "^0.3.12",
     "@langchain/core": "^0.3.17",
     "@langchain/groq": "^0.1.2",
