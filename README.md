@@ -322,6 +322,44 @@ Here is an example from the HigherLevelDevKit itself:
    - When generating db related code always try to minimise the number of db round trips - so use group by and in clauses where possible etc.
 </pre>
 
+## MCP Servers
+
+The Higher Level Dev Kit supports Model Context Protocol (MCP) servers, which extend the capabilities of the system by integrating external tools and services.
+
+### What are MCP Servers?
+
+MCP (Model Context Protocol) servers are specialized servers that implement the Model Context Protocol, allowing the Higher Level Dev Kit to communicate with external tools and services. These servers act as bridges between the dev kit and various functionalities like code analysis, data retrieval, or specialized processing.
+
+### Adding MCP Servers
+
+You can add MCP servers to the system using the MCP Agent. Here's how:
+
+1. **List current MCP servers**:
+   Ask the MCP Agent to list current servers to see what's already configured.
+
+2. **Search for available servers**:
+   Ask the MCP Agent to search for an MCP server that provides the functionality you need.
+   Example: "Can you find an MCP server for code analysis?"
+
+3. **Install a server**:
+   Once you've identified a server you want to add, ask the MCP Agent to install it.
+   Example: "Please install the code-analysis MCP server."
+
+4. **Configure the server**:
+   The MCP Agent will guide you through any necessary configuration steps, such as:
+   - Setting up API keys or credentials
+   - Configuring server-specific settings
+   - Testing the server to ensure it's working properly
+
+5. **Verify installation**:
+   After installation, you can ask to "list available tools" to verify that the server's tools are accessible.
+
+All MCP servers are stored in the `~/.hldk/mcp-servers` directory (unless overridden in the settings page), with their configurations managed in the `mcp-servers.json` file.
+
+### Building Custom MCP Servers
+
+If no existing MCP server meets your needs, you can ask the MCP Agent to help you build a custom server. The agent will guide you through the process of creating a new MCP server that implements the specific functionality you require.
+
 ## Implementing a Plugin
 
 The Higher Level Dev Kit supports custom plugins, allowing you to extend its functionality. Here's how to implement a plugin:
