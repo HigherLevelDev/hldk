@@ -9,8 +9,8 @@
       }
     }
   },
-  "version": "0.23.0",
-  "description": "Higher Level Dev Kit",
+  "version": "0.24.0",
+  "description": "Eve Horizon",
   "author": "adam@higherleveldev",
   "private": true,
   "license": "custom",
